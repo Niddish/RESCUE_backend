@@ -13,33 +13,33 @@ def write_json_atomic(filename, data):
     with open(tmp_filename, "w") as f:
         json.dump(data, f, indent=4)
 
-    os.replace(tmp_filename, filename)  # Atomic rename
+    os.replace(tmp_filename, filename)  
 
 def main():
     json_filename = "gpu_topology.json"
     
-    # Define total GPUs dynamically (set this value as needed)
-    total_gpus = 96  # Change this value if necessary
+    # Define total GPUs dynamically 
+    total_gpus = 96  #CHANGE VALUE HERE
 
     while True:
         try:
-            # Collect real-time GPU data from MPI
+            #collect real-time GPU data from MPI
             gpu_data = collect_and_merge_gpu_data()
 
-            # Generate the topology with the specified total GPUs
+            #generate topology
             topology_data = generate_topology_from_gpu_data(gpu_data, total_gpus)
 
-            # Write updated topology to JSON (atomic)
+            #write to json
             write_json_atomic(json_filename, topology_data)
 
             print("Updated gpu_topology.json")
 
-            # Wait 5 seconds before the next update
+            #wait before next write to reduce overhead
             time.sleep(5)
 
         except KeyboardInterrupt:
             print("\nInterrupted. Keeping the last known good GPU topology.")
-            break  # Exit cleanly without deleting the file
+            break  #currently exits with keyboard interrupt, this ensures data is not lost on exit
 
 if __name__ == "__main__":
     main()
