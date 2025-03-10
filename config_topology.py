@@ -1,6 +1,5 @@
 import yaml
 import json
-import time
 
 def load_config(filepath="20B.yml"):
     """
@@ -10,7 +9,7 @@ def load_config(filepath="20B.yml"):
         config = yaml.safe_load(f)
     return config
 
-def extract_parallel_settings(config, total_gpus=96):
+def extract_parallel_settings(config, total_gpus):
     """
     Extract parallelism settings from the configuration and compute data parallel size.
     """
@@ -24,17 +23,9 @@ def extract_parallel_settings(config, total_gpus=96):
         "data_parallel_size": data_parallel_size,
     }
 
-def construct_3d_topology(parallel_settings, gpu_info, total_gpus=96, gpus_per_node=4):
+def construct_3d_topology(parallel_settings, gpu_info, total_gpus, gpus_per_node=4):
     """
-    Constructs a corrected 3D topology representation based on parallel settings and real GPU data.
-
-    Structure:
-    - Detected Nodes with GPUs
-    - Placeholder Nodes with no data
-
-    The topology is structured as:
-      - Nodes (outer list)
-      - GPUs under each node (list of GPU dictionaries)
+    Constructs a 3D topology representation based on parallel settings and real GPU data.
     """
     topology = {}
     node_gpu_map = {}
@@ -63,11 +54,9 @@ def construct_3d_topology(parallel_settings, gpu_info, total_gpus=96, gpus_per_n
 
     return topology
 
-def generate_topology_from_gpu_data(gpu_info, total_gpus=96):
+def generate_topology_from_gpu_data(gpu_info, total_gpus):
     """
     Generate the 3D topology from real-time GPU data.
-
-    Returns a JSON-serializable dictionary.
     """
     config = load_config("20B.yml")
     parallel_settings = extract_parallel_settings(config, total_gpus)
