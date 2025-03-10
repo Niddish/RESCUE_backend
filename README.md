@@ -15,7 +15,7 @@ And that's it!
 
 ### **NOTE**
 - This version only works with the 20B.yml config - or at least, that's what I've tested. Support for other configs in the future.
-- There is an shell script that is meant to use Flask to take the contents of the JSON and use it as an API, which can be referenced in the frontend. It was working at some point, but more recently has not been. Needs to be fixed.
+- There is an shell script that is meant to use Flask to take the contents of the JSON and use it as an API, which can be referenced in the frontend. It was working at some point, but more recently has not been. Needs to be fixed. This, and the webserver code is found in the flask folder.
 
 ---
 
