@@ -17,14 +17,17 @@ def write_json_atomic(filename, data):
 
 def main():
     json_filename = "gpu_topology.json"
+    
+    # Define total GPUs dynamically (set this value as needed)
+    total_gpus = 96  # Change this value if necessary
 
     while True:
         try:
             # Collect real-time GPU data from MPI
             gpu_data = collect_and_merge_gpu_data()
 
-            # Generate the topology
-            topology_data = generate_topology_from_gpu_data(gpu_data)
+            # Generate the topology with the specified total GPUs
+            topology_data = generate_topology_from_gpu_data(gpu_data, total_gpus)
 
             # Write updated topology to JSON (atomic)
             write_json_atomic(json_filename, topology_data)
