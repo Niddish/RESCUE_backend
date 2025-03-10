@@ -28,7 +28,7 @@ LOCAL_PORT=8080
 echo "TACC: Starting Flask server on ${NODE_HOSTNAME}:${LOCAL_PORT}"
 nohup python3 webserver.py &> ${HOME}/flask.log &
 
-sleep 5  # Give Flask time to start
+sleep 5 
 
 LOGIN_PORT=$(tap_get_port)
 echo "TACC: got login node Flask port ${LOGIN_PORT}"
@@ -47,7 +47,7 @@ echo "TACC: created reverse ports on Frontera logins"
 FLASK_URL="https://frontera.tacc.utexas.edu:${LOGIN_PORT}"
 echo "TACC: Your Flask server is now running at ${FLASK_URL}"
 
-# Keep the job alive while Flask is running
+#keep the job alive while Flask is running
 while ps aux | grep webserver.py | grep -qv grep; do
     sleep 10
 done
