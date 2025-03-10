@@ -11,11 +11,11 @@ def get_available_gpus():
     """
     pynvml.nvmlInit()
 
-    # Get node hostname (short name)
+    #get node name
     full_node_name = socket.gethostname()
     short_node_name = full_node_name.split('.')[0]
 
-    # Check CUDA_VISIBLE_DEVICES first
+    #check available GPUs
     cuda_visible_devices = os.getenv("CUDA_VISIBLE_DEVICES")
     if cuda_visible_devices:
         gpu_indices = [int(x) for x in cuda_visible_devices.split(",") if x.strip().isdigit()]
@@ -52,24 +52,23 @@ def collect_and_merge_gpu_data():
     Returns a list of dictionaries containing GPU and node details.
     """
     comm = MPI.COMM_WORLD
-    rank = comm.Get_rank()  # Unique ID for each node
+    rank = comm.Get_rank()  #each node has unique ID
 
     while True:
-        # Each node gets its own GPU data
         local_gpu_data = get_available_gpus()
 
-        # Master node (rank 0) collects all data
+        #first node collects all data
         all_gpu_data = comm.gather(local_gpu_data, root=0)
 
         if rank == 0:
-            # Master node merges all collected data into a list
+            #first node merges the data
             merged_data = []
             for node_data in all_gpu_data:
                 for node_name, gpus in node_data.items():
                     for gpu in gpus:
                         merged_data.append(gpu)
 
-            return merged_data  # Now returns a list instead of writing JSON
+            return merged_data  
 
-        # Wait 5 seconds before next update
+        #wait 5 seconds to reduce overhead
         time.sleep(5)
