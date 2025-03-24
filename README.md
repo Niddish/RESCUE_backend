@@ -7,7 +7,7 @@ To run:
 1. Clone the repository.
 2. Modify 20B.yml to chosen specifications (currently designed to read the pipeline and model parallel values directly from this config specifically)
 3. Modify main.py to chosen specifications (change total number of gpus with your desired value [ex. - pp=4, mp=2, dp=12 = 96 gpus])
-4. Run `mpirun -np <num_nodes> python main.py ` - replace <num_nodes> with however many nodes you have allocated.
+4. Run `mpirun -np <num_nodes> python main.py ` - replace <num_nodes> with however many nodes you have allocated - this should also be on compute node.
 5. You should now see (via another terminal) a new file - gpu_topology.json - this is updated every 5 seconds with GPU information.
    
 And that's it!
