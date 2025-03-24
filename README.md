@@ -11,11 +11,20 @@ To run:
    
 And that's it!
 
+## Running webserver
+
+To run:
+
+1. Run "sbatch flask_job.sh" - this is the shell script.
+2. Wait ~15-30 seconds (allocates node to run webserver so time varies).
+3. After waiting, do an "ls" - there should be two new files - flask.out and flask. - contains the link to be inputted in frontend code, and is the debug log)
+
+And that's it!
+
 ---
 
 ### **NOTE**
 - This version only works with the 20B.yml config - or at least, that's what I've tested. Support for other configs in the future.
-- There is an shell script that is meant to use Flask to take the contents of the JSON and use it as an API, which can be referenced in the frontend. It was working at some point, but more recently has not been. Needs to be fixed. This, and the webserver code is found in the flask folder.
 
 ---
 
