@@ -1,0 +1,506 @@
+{
+    "parallel_settings": {
+        "pipe_parallel_size": 4,
+        "model_parallel_size": 2,
+        "data_parallel_size": 12
+    },
+    "topology": {
+        "c197-071": [
+            {
+                "id": "GPU 1",
+                "info": {
+                    "id": 0,
+                    "name": "Quadro RTX 5000",
+                    "memory_used_MB": 266,
+                    "memory_total_MB": 16384,
+                    "utilization_pct": 0,
+                    "temperature_C": 30,
+                    "clock_rate_MHz": 300,
+                    "node_name": "c197-071"
+                }
+            },
+            {
+                "id": "GPU 2",
+                "info": {
+                    "id": 1,
+                    "name": "Quadro RTX 5000",
+                    "memory_used_MB": 266,
+                    "memory_total_MB": 16384,
+                    "utilization_pct": 0,
+                    "temperature_C": 30,
+                    "clock_rate_MHz": 300,
+                    "node_name": "c197-071"
+                }
+            },
+            {
+                "id": "GPU 3",
+                "info": {
+                    "id": 2,
+                    "name": "Quadro RTX 5000",
+                    "memory_used_MB": 266,
+                    "memory_total_MB": 16384,
+                    "utilization_pct": 0,
+                    "temperature_C": 31,
+                    "clock_rate_MHz": 300,
+                    "node_name": "c197-071"
+                }
+            },
+            {
+                "id": "GPU 4",
+                "info": {
+                    "id": 3,
+                    "name": "Quadro RTX 5000",
+                    "memory_used_MB": 266,
+                    "memory_total_MB": 16384,
+                    "utilization_pct": 0,
+                    "temperature_C": 31,
+                    "clock_rate_MHz": 300,
+                    "node_name": "c197-071"
+                }
+            }
+        ],
+        "c198-061": [
+            {
+                "id": "GPU 1",
+                "info": {
+                    "id": 0,
+                    "name": "Quadro RTX 5000",
+                    "memory_used_MB": 266,
+                    "memory_total_MB": 16384,
+                    "utilization_pct": 0,
+                    "temperature_C": 33,
+                    "clock_rate_MHz": 300,
+                    "node_name": "c198-061"
+                }
+            },
+            {
+                "id": "GPU 2",
+                "info": {
+                    "id": 1,
+                    "name": "Quadro RTX 5000",
+                    "memory_used_MB": 266,
+                    "memory_total_MB": 16384,
+                    "utilization_pct": 0,
+                    "temperature_C": 34,
+                    "clock_rate_MHz": 300,
+                    "node_name": "c198-061"
+                }
+            },
+            {
+                "id": "GPU 3",
+                "info": {
+                    "id": 2,
+                    "name": "Quadro RTX 5000",
+                    "memory_used_MB": 266,
+                    "memory_total_MB": 16384,
+                    "utilization_pct": 0,
+                    "temperature_C": 34,
+                    "clock_rate_MHz": 300,
+                    "node_name": "c198-061"
+                }
+            },
+            {
+                "id": "GPU 4",
+                "info": {
+                    "id": 3,
+                    "name": "Quadro RTX 5000",
+                    "memory_used_MB": 266,
+                    "memory_total_MB": 16384,
+                    "utilization_pct": 0,
+                    "temperature_C": 34,
+                    "clock_rate_MHz": 300,
+                    "node_name": "c198-061"
+                }
+            }
+        ],
+        "Node 3 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 4 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 5 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 6 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 7 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 8 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 9 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 10 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 11 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 12 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 13 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 14 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 15 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 16 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 17 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 18 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 19 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 20 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 21 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 22 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 23 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ],
+        "Node 24 (not detected)": [
+            {
+                "id": "GPU 1 (no data)"
+            },
+            {
+                "id": "GPU 2 (no data)"
+            },
+            {
+                "id": "GPU 3 (no data)"
+            },
+            {
+                "id": "GPU 4 (no data)"
+            }
+        ]
+    },
+    "configuration": {
+        "vocab_file": "./20B_checkpoints/20B_tokenizer.json",
+        "save": "./20B_checkpoints",
+        "load": "./20B_checkpoints",
+        "data_path": "./data/pile_20B_tokenizer/pile_20B_tokenizer_text_document",
+        "pipe_parallel_size": 4,
+        "model_parallel_size": 2,
+        "num_layers": 44,
+        "hidden_size": 6144,
+        "num_attention_heads": 64,
+        "seq_length": 2048,
+        "max_position_embeddings": 2048,
+        "norm": "layernorm",
+        "pos_emb": "rotary",
+        "rotary_pct": 0.25,
+        "no_weight_tying": true,
+        "gpt_j_residual": true,
+        "output_layer_parallelism": "column",
+        "scaled_upper_triang_masked_softmax_fusion": true,
+        "bias_gelu_fusion": true,
+        "rope_fusion": false,
+        "layernorm_fusion": false,
+        "init_method": "small_init",
+        "output_layer_init_method": "wang_init",
+        "optimizer": {
+            "type": "Adam",
+            "params": {
+                "lr": 9.7e-05,
+                "betas": [
+                    0.9,
+                    0.95
+                ],
+                "eps": 1e-08
+            }
+        },
+        "min_lr": 9.7e-06,
+        "zero_optimization": {
+            "stage": 1,
+            "allgather_partitions": true,
+            "allgather_bucket_size": 1260000000,
+            "overlap_comm": true,
+            "reduce_scatter": true,
+            "reduce_bucket_size": 1260000000,
+            "contiguous_gradients": true
+        },
+        "train_micro_batch_size_per_gpu": 4,
+        "gradient_accumulation_steps": 32,
+        "data_impl": "mmap",
+        "split": "995,4,1",
+        "checkpoint_activations": true,
+        "checkpoint_num_layers": 1,
+        "partition_activations": false,
+        "synchronize_each_layer": true,
+        "gradient_clipping": 1.0,
+        "weight_decay": 0.01,
+        "hidden_dropout": 0,
+        "attention_dropout": 0,
+        "fp16": {
+            "fp16": true,
+            "enabled": true,
+            "loss_scale": 0,
+            "loss_scale_window": 1000,
+            "initial_scale_power": 12,
+            "hysteresis": 2,
+            "min_loss_scale": 1
+        },
+        "train_iters": 150000,
+        "lr_decay_iters": 150000,
+        "distributed_backend": "nccl",
+        "lr_decay_style": "cosine",
+        "warmup": 0.01,
+        "checkpoint_factor": 500,
+        "eval_interval": 1000,
+        "eval_iters": 10,
+        "log_interval": 2,
+        "steps_per_print": 2,
+        "wall_clock_breakdown": false,
+        "tokenizer_type": "HFTokenizer",
+        "tensorboard-dir": "./tensorboard",
+        "log_dir": "./logs"
+    }
+}
