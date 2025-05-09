@@ -6,9 +6,7 @@ import time
 from mpi4py import MPI
 
 def get_available_gpus():
-    """
-    Detect available GPUs using NVML and return GPU information.
-    """
+   #dectect and return GPU info via NVML
     pynvml.nvmlInit()
 
     #get node name
@@ -32,6 +30,7 @@ def get_available_gpus():
         memory = pynvml.nvmlDeviceGetMemoryInfo(handle)
         utilization = pynvml.nvmlDeviceGetUtilizationRates(handle)
         temperature = pynvml.nvmlDeviceGetTemperature(handle, pynvml.NVML_TEMPERATURE_GPU)
+        clock_rate = pynvml.nvmlDeviceGetClockInfo(handle, pynvml.NVML_CLOCK_GRAPHICS)
 
         gpu_info.append({
             "id": i,
@@ -40,6 +39,7 @@ def get_available_gpus():
             "memory_total_MB": memory.total // (1024 * 1024),
             "utilization_pct": utilization.gpu,
             "temperature_C": temperature,
+            "clock_rate_MHz": clock_rate,
             "node_name": short_node_name
         })
 
@@ -47,10 +47,7 @@ def get_available_gpus():
     return {f"Node: {short_node_name}": gpu_info}
 
 def collect_and_merge_gpu_data():
-    """
-    Uses MPI to collect GPU data from all nodes and merge it in real-time.
-    Returns a list of dictionaries containing GPU and node details.
-    """
+   #use MPI to gather information from all nodes and merge it to one "primary" node that writes to the JSON
     comm = MPI.COMM_WORLD
     rank = comm.Get_rank()  #each node has unique ID
 
