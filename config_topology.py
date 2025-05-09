@@ -2,7 +2,7 @@ import yaml
 import json
 
 def load_config(filepath="20B.yml"):
-    #Load 20B.yml file
+    #load 20B.yml file
     with open(filepath, 'r') as f:
         config = yaml.safe_load(f)
     return config
@@ -47,9 +47,7 @@ def construct_3d_topology(parallel_settings, gpu_info, total_gpus, gpus_per_node
     return topology
 
 def generate_topology_from_gpu_data(gpu_info, total_gpus):
-    """
-    Generate the 3D topology from real-time GPU data.
-    """
+    #generate topology helper function
     config = load_config("20B.yml")
     parallel_settings = extract_parallel_settings(config, total_gpus)
     topology = construct_3d_topology(parallel_settings, gpu_info, total_gpus)
