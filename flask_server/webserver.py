@@ -10,7 +10,7 @@ FILE_PATH = "gpu_topology.json"
 
 @app.route("/json")
 def get_json():
-    """API endpoint to return GPU topology data as JSON"""
+    #API endpoint to return GPU topology data as JSON
     with open(FILE_PATH, "r") as f:
         data = json.load(f)
     return jsonify(data)
