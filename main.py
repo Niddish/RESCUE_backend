@@ -5,10 +5,8 @@ from config_topology import generate_topology_from_gpu_data
 import os
 
 def write_json_atomic(filename, data):
-    """
-    Writes JSON data atomically to prevent corruption and ensure consistency.
-    If interrupted, the original file remains unchanged.
-    """
+    #write to json atomically, if file is corrupted, keep last known "good" topology.
+    
     tmp_filename = filename + ".tmp"
     with open(tmp_filename, "w") as f:
         json.dump(data, f, indent=4)
@@ -18,7 +16,7 @@ def write_json_atomic(filename, data):
 def main():
     json_filename = "gpu_topology.json"
     
-    # Define total GPUs dynamically 
+    #define total GPUs
     total_gpus = 96  #CHANGE VALUE HERE
 
     while True:
