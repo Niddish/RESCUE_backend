@@ -1,4 +1,3 @@
 *NOTE* 
 
-Everything in this file is work-in-progress.
-It was working at some point, not sure why it broke, but you are free to take a look.
+This folder should be in the same directory as the other files - need to update it. Files in this folder do work properly.
